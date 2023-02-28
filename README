@@ -1,0 +1,40 @@
+David DeBonis
+ddebonis@cs.unm.edu
+Spring 2013
+
+Files:
+run.sh		- builds and runs four main experiments presented (concurrently)
+run_all.sh	- builds and runs all elementary CA rules (type q to quit each)
+experiments	- directory with image files from experiments
+rules		- directory with image files for all 256 elementary CA rules
+src		- directory with source files for the ca application
+
+Simply execute ./run.sh which performs the following:
+  - builds ca application
+  - runs ca application with point and uniform distribution for a rule from each of the four Wolfram Classes
+
+Keyboard commands for ca application:
+  - QUIT (Esc OR q OR end)
+  - ZOOM IN (+ OR pagedown)
+  - ZOOM OUT (- OR pageup)
+  - PAN LEFT / RIGHT / UP / DOWN (arrow keys)
+  - TOGGLE GRID (insert OR g or l)
+  - RESET DISPLAY (home)
+  - FINE TUNE (shift PLUS ZOOM OR PAN KEYS)
+
+Manual application options:
+
+Usage - ./ca [-r <rule>] [-n <neighbor radius>]
+           [-s <state>] [-t <ca type>]
+           [-d <initial distribution>]
+           [-z <zoom>] [-c <cellsize>] [-g]
+
+where
+  - rule is a number from 0 to 255
+  - radius is any number less than cellcount
+  - state is the number of distinct states for totalistic CA
+  - type is elementary | totalistic
+  - distribution is point | uniform
+  - zoom is a zoom factor of 1 to 32
+  - cellsize is the number of pixels per cell
+  - the -g flag is to turn off the cell grid
