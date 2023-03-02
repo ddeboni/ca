@@ -47,6 +47,6 @@ unsigned int TotalisticCA::Generate() {
 		grid[stepcount+1][i] = (sum > radius) ? rulebook[mask] : 0;
 	}
 
-	delete neighborIndex;
+	delete[] neighborIndex;
 	return ++stepcount;
 }

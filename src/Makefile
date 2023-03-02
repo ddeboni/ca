@@ -14,10 +14,10 @@ DEBUG = -g
 OS := $(shell uname)
 ifeq ($(OS), Linux)
 CFLAGS = -Wall -c $(DEBUG)
-LFLAGS = -Wall $(DEBUG) -lglut -lGLU -lGL
+LFLAGS = $(DEBUG) -lglut -lGLU -lGL
 else
-CFLAGS = -Wall -c $(DEBUG) -DMAC_OS
-LFLAGS = -Wall $(DEBUG) -framework OpenGL -framework GLUT
+CFLAGS = -Wall -c $(DEBUG) -DMAC_OS -DGL_SILENCE_DEPRECATION
+LFLAGS = $(DEBUG) -framework OpenGL -framework GLUT
 endif
 
 ca: $(OBJS)

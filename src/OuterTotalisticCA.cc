@@ -44,6 +44,6 @@ unsigned int OuterTotalisticCA::Generate() {
 		grid[stepcount+1][i] = rulebook[mask];
 	}
 
-	delete neighborIndex;
+	delete[] neighborIndex;
 	return ++stepcount;
 }
